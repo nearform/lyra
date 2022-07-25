@@ -62,7 +62,11 @@ export class Trie {
         return output;
       }
     }
-
+    
+    // Resetting us back to the top of the tree to look at all the options 
+    if (tolerance) {
+      node = this.root;
+    }
     findAllWords(node, output);
 
     function findAllWords(_node: TrieNode, _output: FindResult) {

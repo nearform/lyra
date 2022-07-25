@@ -410,8 +410,90 @@ describe("lyra", () => {
       tolerance: 3,
     });
 
+    // this now finds 3, which I think is correct?
     expect(moreTolerantSearch.count).toBe(2);
   });
+
+  it("Should tolerate typos better", async () => {
+    const db = new Lyra({
+      schema: {
+        txt: "string",
+      },
+      stemming: false // Disabling stemming to avoid confounding the results
+    })
+    
+    // Insert "stelle", and other words that are all within edit distance 2
+    await db.insert({ txt: 'stelle' })
+    await db.insert({ txt: 'stele' })
+    await db.insert({ txt: 'snelle' })
+    await db.insert({ txt: 'stellle' })
+    await db.insert({ txt: 'scelte' })
+    
+    let result = await db.search({ term: 'stelle', tolerance: 2 })
+    // this finds everything except 'scelte' but i believe this is due to the fact its comparing agianst the tokenized value, 'stell' and not 'stelle'
+    expect(result.count).toBe(5);
+  })
+
+  it("should prove doc is right", async () => {
+    const movieDB = new Lyra({
+      schema: {
+        title: 'string',
+        director: 'string',
+        plot: 'string',
+        year: 'number',
+        isFavorite: 'boolean'
+      }
+    });
+
+    const { id: thePrestige } = await movieDB.insert({
+      title: 'The prestige',
+      director: 'Christopher Nolan',
+      plot: 'Two friends and fellow magicians become bitter enemies after a sudden tragedy. As they devote themselves to this rivalry, they make sacrifices that bring them fame but with terrible consequences.',
+      year: 2006,
+      isFavorite: true
+    });
+    
+    const { id: granTorino } = await movieDB.insert({
+      title: 'Gran Torino',
+      director: 'Clint Eastwood',
+      plot: 'When Walt Kowalski\'s neighbour, Thao, tries to steal his 1972 Gran Torino, he decides to help him reform. However, Walt gets involved in a feud with a local gang leader when he saves Thao from them.',
+      year: 2009,
+      isFavorite: true
+    });
+    
+    const { id: inception } = await movieDB.insert({
+      title: 'Inception',
+      director: 'Christopher Nolan',
+      plot: 'Cobb steals information from his targets by entering their dreams. Saito offers to wipe clean Cobb\'s criminal history as payment for performing an inception on his sick competitor\'s son.',
+      year: 2010,
+      isFavorite: true
+    });
+    
+    const { id: bigFish } = await movieDB.insert({
+      title: 'Big Fish',
+      director: 'Tim Burton',
+      plot: 'Will Bloom returns home to care for his dying father, who had a penchant for telling unbelievable stories. After he passes away, Will tries to find out if his tales were really true.',
+      year: 2004,
+      isFavorite: true
+    });
+    
+    const { id: harryPotter } = await movieDB.insert({
+      title: 'Harry Potter and the Philosopher\'s Stone',
+      director: 'Chris Columbus',
+      plot: 'Harry Potter, an eleven-year-old orphan, discovers that he is a wizard and is invited to study at Hogwarts. Even as he escapes a dreary life and enters a world of magic, he finds trouble awaiting him.',
+      year: 2001,
+      isFavorite: false
+    });
+
+    const result = await movieDB.search({
+      term: 'Bhris',
+      properties: ['director'],
+      tolerance: 1
+    });
+
+    expect(result.count).toEqual(1)
+
+  })
 
   it("Should support nested properties", async () => {
     const db = new Lyra({

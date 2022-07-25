@@ -57,6 +57,12 @@ importers:
     devDependencies:
       vuepress: 1.9.7
 
+  packages/examples/tomtest:
+    specifiers:
+      '@nearform/lyra': workspace:*
+    dependencies:
+      '@nearform/lyra': link:../../lyra
+
   packages/examples/with-react:
     specifiers:
       '@nearform/lyra': workspace:*
