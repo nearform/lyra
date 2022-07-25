@@ -66,3 +66,11 @@ Supported languages are:
  - spanish
  - swedish"
 `;
+
+exports[`lyra Should throw error if where clause is not correct 1`] = `"Invalid query parameters. Expected >=, >, =, <, <=, but got: A"`;
+
+exports[`lyra Should throw error if where clause is not correct 2`] = `"Invalid query parameters. Expected a number, but got: A STRING"`;
+
+exports[`lyra Should throw error if where clause is not correct 3`] = `"Invalid query parameters. Expected >=, >, =, <, <=, but got: {\\"=\\":123123,\\">=\\":123454}"`;
+
+exports[`lyra Should throw error if where clause is not correct 4`] = `"Invalid query parameters. Expected true, false, but got: 1"`;

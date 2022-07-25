@@ -1,4 +1,4 @@
-import type { PropertiesSchema } from "./lyra";
+import type { PropertiesSchema, allowedNumericComparison } from "./lyra";
 export type Nullable<T> = T | null;
 
 type ResolveTypes<TType> = TType extends "string"
@@ -23,3 +23,26 @@ export type SearchProperties<
     ? `${TKey}.${SearchProperties<TSchema[TKey]>}`
     : TKey
   : never;
+
+// If TSchema[Tkey] is a string, we do not include it
+// If it is a nested schema, we call WhereParams with TSchema[TKey]
+// If it is a standard type we handle it
+export type WhereParams<TSchema extends PropertiesSchema> = {
+  [TKey in keyof TSchema as TSchema[TKey] extends "string"
+    ? never
+    : TKey]?: TSchema[TKey] extends PropertiesSchema
+    ? WhereParams<TSchema[TKey]> extends [never] // If the nested WhereParams is empty we exclude it
+      ? never
+      : WhereParams<TSchema[TKey]>
+    : TSchema[TKey] extends "number"
+    ? NumberComparison
+    : TSchema[TKey] extends "boolean"
+    ? boolean
+    : never;
+};
+
+export type NumberComparison = {
+  [P in SupportedComparisons]?: number;
+};
+
+export type SupportedComparisons = typeof allowedNumericComparison[number];

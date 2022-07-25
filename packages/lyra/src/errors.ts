@@ -29,3 +29,6 @@ export const LANGUAGE_NOT_SUPPORTED = (lang: string) =>
   `Language "${lang}" is not supported.\nSupported languages are:\n - ${SUPPORTED_LANGUAGES.join(
     "\n - "
   )}`;
+
+export const INVALID_QUERY_PARAMS = (got: string, expected: string[]) =>
+  `Invalid query parameters. Expected ${expected.join(", ")}, but got: ${got}`;
