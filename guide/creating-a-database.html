@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Creating a new Lyra instance | Lyra</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Documentation for the Lyra search engine">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/lyra/assets/css/0.styles.499a90be.css" as="style"><link rel="preload" href="/lyra/assets/js/app.66e98ad6.js" as="script"><link rel="preload" href="/lyra/assets/js/2.3b659215.js" as="script"><link rel="preload" href="/lyra/assets/js/8.58d41286.js" as="script"><link rel="prefetch" href="/lyra/assets/js/10.56cdb699.js"><link rel="prefetch" href="/lyra/assets/js/11.afbb1882.js"><link rel="prefetch" href="/lyra/assets/js/12.26907c71.js"><link rel="prefetch" href="/lyra/assets/js/3.f31e7b2b.js"><link rel="prefetch" href="/lyra/assets/js/4.78d0be46.js"><link rel="prefetch" href="/lyra/assets/js/5.62dee228.js"><link rel="prefetch" href="/lyra/assets/js/6.8b69d51b.js"><link rel="prefetch" href="/lyra/assets/js/7.69837f42.js"><link rel="prefetch" href="/lyra/assets/js/9.50db3085.js">
+    <link rel="stylesheet" href="/lyra/assets/css/0.styles.499a90be.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/lyra/" class="home-link router-link-active"><!----> <span class="site-name">Lyra</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/lyra/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/lyra/guide/getting-started/" class="nav-link">
+  Quickstart
+</a></div> <a href="https://github.com/nearform/lyra" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/lyra/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/lyra/guide/getting-started/" class="nav-link">
+  Quickstart
+</a></div> <a href="https://github.com/nearform/lyra" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/lyra/guide/getting-started.html" class="sidebar-link">Getting started</a></li><li><a href="/lyra/guide/creating-a-database.html" aria-current="page" class="active sidebar-link">Creating a new Lyra instance</a></li><li><a href="/lyra/guide/insert-data.html" class="sidebar-link">Insert data</a></li><li><a href="/lyra/guide/search.html" class="sidebar-link">Searching</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="creating-a-new-lyra-instance"><a href="#creating-a-new-lyra-instance" class="header-anchor">#</a> Creating a new Lyra instance</h1> <p>You can create a new Lyra instance by importing the <code>Lyra</code> class in your project.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Lyra <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@nearform/lyra'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> db <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Lyra</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>The Lyra class needs a <strong>schema</strong> to be able to process data and indices. The schema represents the documents we're going to insert into the database.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> lyra <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@nearfom/lyra'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> movieDB <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Lyra</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">schema</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">plot</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">year</span><span class="token operator">:</span> <span class="token string">'number'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">isFavorite</span><span class="token operator">:</span> <span class="token string">'boolean'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>With the current version of Lyra, only <code>string</code> fields (from now on, <em>properties</em>) will be searchable. You can still add many different properties, as the database will keep them in-memory and will send the whole document back after searching for a specific word or sentence in one or many searchable fields.</p> <div class="custom-block danger"><p class="custom-block-title">No nested properties</p> <p>With the current version of Lyra, nested properties are not supported.</p></div> <p>The following schema will be rejected:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> lyra <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@nearfom/lyra'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> movieDB <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Lyra</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">schema</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">plot</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">year</span><span class="token operator">:</span> <span class="token string">'number'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">isFavorite</span><span class="token operator">:</span> <span class="token string">'boolean'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">cast</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">leading</span><span class="token operator">:</span> <span class="token string">'string'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="input-analyzer"><a href="#input-analyzer" class="header-anchor">#</a> Input analyzer</h1> <p>By default, Lyra analyzes the input and performs a <strong>stemming</strong> operation, which allows the engine to perform more optimize queries, as well as saving indexing space.</p> <blockquote><p>In linguistic morphology and information retrieval, stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form. The stem need not be identical to the morphological root of the word; it is usually sufficient that related words map to the same stem, even if this stem is not in itself a valid root. Algorithms for stemming have been studied in computer science since the 1960s. Many search engines treat words with the same stem as synonyms as a kind of query expansion, a process called conflation. (<a href="https://en.wikipedia.org/wiki/Stemming" target="_blank" rel="noopener noreferrer">Wikipedia<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>)</p></blockquote> <p>By default, Lyra uses the English language analyzer, but you can override this behaviour while initializing a new Lyra insrance:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> lyra <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@nearfom/lyra'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> movieDB <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Lyra</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">schema</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">plot</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">year</span><span class="token operator">:</span> <span class="token string">'number'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">isFavorite</span><span class="token operator">:</span> <span class="token string">'boolean'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">defaultLanguage</span><span class="token operator">:</span> <span class="token string">'italian'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>You can override the default language for a given document during data insertion:</p> <div class="language-js extra-class"><pre class="language-js"><code>movieDB<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>myDocument<span class="token punctuation">,</span> <span class="token string">'spanish'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>As for today, the available languages are:</p> <ul><li>dutch</li> <li>english</li> <li>french</li> <li>italian</li> <li>norwegian</li> <li>portugese</li> <li>russian</li> <li>spanish</li> <li>swedish</li></ul> <h1 id="inserting-data"><a href="#inserting-data" class="header-anchor">#</a> Inserting data</h1> <p>Once the database is ready, you can start <a href="/lyra/guide/insert-data.html">adding some data to it</a>.</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/nearform/lyra/edit/main/packages/docs/src/guide/creating-a-database.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/lyra/guide/getting-started.html" class="prev">
+        Getting started
+      </a></span> <span class="next"><a href="/lyra/guide/insert-data.html">
+        Insert data
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/lyra/assets/js/app.66e98ad6.js" defer></script><script src="/lyra/assets/js/2.3b659215.js" defer></script><script src="/lyra/assets/js/8.58d41286.js" defer></script>
+  </body>
+</html>

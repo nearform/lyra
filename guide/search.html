@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Searching | Lyra</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Documentation for the Lyra search engine">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/lyra/assets/css/0.styles.499a90be.css" as="style"><link rel="preload" href="/lyra/assets/js/app.66e98ad6.js" as="script"><link rel="preload" href="/lyra/assets/js/2.3b659215.js" as="script"><link rel="preload" href="/lyra/assets/js/11.afbb1882.js" as="script"><link rel="prefetch" href="/lyra/assets/js/10.56cdb699.js"><link rel="prefetch" href="/lyra/assets/js/12.26907c71.js"><link rel="prefetch" href="/lyra/assets/js/3.f31e7b2b.js"><link rel="prefetch" href="/lyra/assets/js/4.78d0be46.js"><link rel="prefetch" href="/lyra/assets/js/5.62dee228.js"><link rel="prefetch" href="/lyra/assets/js/6.8b69d51b.js"><link rel="prefetch" href="/lyra/assets/js/7.69837f42.js"><link rel="prefetch" href="/lyra/assets/js/8.58d41286.js"><link rel="prefetch" href="/lyra/assets/js/9.50db3085.js">
+    <link rel="stylesheet" href="/lyra/assets/css/0.styles.499a90be.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/lyra/" class="home-link router-link-active"><!----> <span class="site-name">Lyra</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/lyra/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/lyra/guide/getting-started/" class="nav-link">
+  Quickstart
+</a></div> <a href="https://github.com/nearform/lyra" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/lyra/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/lyra/guide/getting-started/" class="nav-link">
+  Quickstart
+</a></div> <a href="https://github.com/nearform/lyra" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/lyra/guide/getting-started.html" class="sidebar-link">Getting started</a></li><li><a href="/lyra/guide/creating-a-database.html" class="sidebar-link">Creating a new Lyra instance</a></li><li><a href="/lyra/guide/insert-data.html" class="sidebar-link">Insert data</a></li><li><a href="/lyra/guide/search.html" aria-current="page" class="active sidebar-link">Searching</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lyra/guide/search.html#limit-offset" class="sidebar-link">Limit, Offset</a></li><li class="sidebar-sub-header"><a href="/lyra/guide/search.html#exact-match" class="sidebar-link">Exact Match</a></li><li class="sidebar-sub-header"><a href="/lyra/guide/search.html#tolerance" class="sidebar-link">Tolerance</a></li><li class="sidebar-sub-header"><a href="/lyra/guide/search.html#defaults" class="sidebar-link">Defaults</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="searching"><a href="#searching" class="header-anchor">#</a> Searching</h1> <p>Given the database structure we created in the <a href="/lyra/guide/insert-data.html">previous document</a>, we now have the following index:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> lyra <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@nearfom/lyra'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> movieDB <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Lyra</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">schema</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">plot</span><span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">year</span><span class="token operator">:</span> <span class="token string">'number'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">isFavorite</span><span class="token operator">:</span> <span class="token string">'boolean'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Which means that we can make a search through all the <em>searchable properties</em> (all the <code>string</code> properties).</p> <p>To do that, we can simply use the <code>search</code> method:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> movieDB<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">term</span><span class="token operator">:</span> <span class="token string">'Chris'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">properties</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'director'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>In that case, we are searching for the word <code>Chris</code> in the <code>director</code> index exclusively, which will give us the following result:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">elapsed</span><span class="token operator">:</span> <span class="token string">'102μs'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">hits</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'z3xoJ_VbaBnXsRHnsStpw'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">&quot;Harry Potter and the Philosopher's Stone&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'Chris Columbus'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">plot</span><span class="token operator">:</span> <span class="token string">'Harry Potter, an eleven-year-old orphan, discovers that he is a wizard and is invited to study at Hogwarts. Even as he escapes a dreary life and enters a world of magic, he finds trouble awaiting him.'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'VcaClDjvvriskxi1nBnPW'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'The prestige'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'Christopher Nolan'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">plot</span><span class="token operator">:</span> <span class="token string">'Two friends and fellow magicians become bitter enemies after a sudden tragedy. As they devote themselves to this rivalry, they make sacrifices that bring them fame but with terrible consequences.'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'wUANzFP3zT8rTHp1sRYbF'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'Inception'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'Christopher Nolan'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">plot</span><span class="token operator">:</span> <span class="token string">&quot;Cobb steals information from his targets by entering their dreams. Saito offers to wipe clean Cobb's criminal history as payment for performing an inception on his sick competitor's son.&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">3</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>If the <code>properties</code> property is not set, Lyra will search through all the searchable indices.</p> <h2 id="limit-offset"><a href="#limit-offset" class="header-anchor">#</a> Limit, Offset</h2> <p>We could also limit the search to <code>1</code> result by using the <code>limit</code> option:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> movieDB<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">term</span><span class="token operator">:</span> <span class="token string">'Chris'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">properties</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'director'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">limit</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>And we'll get back the following result:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">elapsed</span><span class="token operator">:</span> <span class="token string">'102μs'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">hits</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'z3xoJ_VbaBnXsRHnsStpw'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">&quot;Harry Potter and the Philosopher's Stone&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'Chris Columbus'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">plot</span><span class="token operator">:</span> <span class="token string">'Harry Potter, an eleven-year-old orphan, discovers that he is a wizard and is invited to study at Hogwarts. Even as he escapes a dreary life and enters a world of magic, he finds trouble awaiting him.'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">3</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>As you can notice, we still get the <code>3</code> as a value for the <code>count</code> property. It means that we have a total of <code>3</code> documents containing the word <code>Chris</code> in the <code>director</code> index.</p> <p>It also tells us that we can paginate our search, and we can do that by setting the <code>offset</code> property:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> movieDB<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">term</span><span class="token operator">:</span> <span class="token string">'Chris'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">properties</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'director'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">limit</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">offset</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>It will return the <strong>second</strong> result for our search:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">elapsed</span><span class="token operator">:</span> <span class="token string">'102μs'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">hits</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'VcaClDjvvriskxi1nBnPW'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'The prestige'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'Christopher Nolan'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">plot</span><span class="token operator">:</span> <span class="token string">'Two friends and fellow magicians become bitter enemies after a sudden tragedy. As they devote themselves to this rivalry, they make sacrifices that bring them fame but with terrible consequences.'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">3</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="exact-match"><a href="#exact-match" class="header-anchor">#</a> Exact Match</h2> <p>Another way to search is to use the <code>exact</code> option, which will match the term exactly:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> movieDB<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">term</span><span class="token operator">:</span> <span class="token string">'Chris'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">properties</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'director'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">exact</span><span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>The result will be something like this:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">elapsed</span><span class="token operator">:</span> <span class="token string">'94μs'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">hits</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'SXLYl5aURpbuNYr7fUlQI'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">&quot;Harry Potter and the Philosopher's Stone&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'Chris Columbus'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">plot</span><span class="token operator">:</span> <span class="token string">'Harry Potter, an eleven-year-old orphan, discovers that he is a wizard and is invited to study at Hogwarts. Even as he escapes a dreary life and enters a world of magic, he finds trouble awaiting him.'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">year</span><span class="token operator">:</span> <span class="token number">2001</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">isFavorite</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>As you can see, we get a <code>count</code> of <code>1</code> as well. It means that we have a total of <code>1</code> document which contains exactly the word <code>Chris</code> in the <code>director</code> index.</p> <h2 id="tolerance"><a href="#tolerance" class="header-anchor">#</a> Tolerance</h2> <p>The tolerance allows you to specify the maximum distance (following the <a href="https://en.wikipedia.org/wiki/Levenshtein_distance" target="_blank" rel="noopener noreferrer">levenshtein algorithm<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>) between the term and the searchable property.</p> <p>If the value is not set, Lyra will work as usual regardless of the tolerance.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> movieDB<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">term</span><span class="token operator">:</span> <span class="token string">'Cris'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">properties</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'director'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">tolerance</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>The searched term is <strong>Cris</strong> but it's misspelled, the correct term would be <strong>Chris</strong>. With the tolerance set to <strong>1</strong> we are telling to <strong>Lyra</strong> that the maximum distance between the term and the searchable property is <strong>1</strong>, so Lyra can make just <strong>1</strong> operation on the term to find the word in the database.</p> <p>The result will be something like this:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">elapsed</span><span class="token operator">:</span> <span class="token string">'103μs'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">hits</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'SXLYl5aURpbuNYr7fUlQI'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">&quot;Harry Potter and the Philosopher's Stone&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">director</span><span class="token operator">:</span> <span class="token string">'Chris Columbus'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">plot</span><span class="token operator">:</span> <span class="token string">'Harry Potter, an eleven-year-old orphan, discovers that he is a wizard and is invited to study at Hogwarts. Even as he escapes a dreary life and enters a world of magic, he finds trouble awaiting him.'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">year</span><span class="token operator">:</span> <span class="token number">2001</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">isFavorite</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>Note: Tolerance will not work together with the <em>exact</em> parameter.</p></blockquote> <h2 id="defaults"><a href="#defaults" class="header-anchor">#</a> Defaults</h2> <p>By default, Lyra limits the search results to <code>10</code>, without any offset (so, <code>0</code> as <code>offset</code> value).</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/nearform/lyra/edit/main/packages/docs/src/guide/search.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/lyra/guide/insert-data.html" class="prev">
+        Insert data
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/lyra/assets/js/app.66e98ad6.js" defer></script><script src="/lyra/assets/js/2.3b659215.js" defer></script><script src="/lyra/assets/js/11.afbb1882.js" defer></script>
+  </body>
+</html>
